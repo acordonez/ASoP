@@ -186,7 +186,7 @@ def plot_histogram(oned_hist,twod_hist,model_dict,bins,title=True,colorbar=True,
     ax.set_xlim(xmin=0,xmax=nbins)
     ax2 = ax.twinx()
     ax2.plot(np.arange(nbins)+0.5,oned_hist,'k--',marker='o',markersize=8)
-    ax2.set_yscale('log',nonposy='clip')
+    ax2.set_yscale('log',nonpositive='clip')
     ax2.set_ylim(ymin=0.0009,ymax=1.0)
     ax2.set_ylabel('Probability of precipitation in bin',fontsize=18)
     ax2.set_yticks([1e-3,1.4e-3,2e-3,3e-3,4.5e-3,7e-3,1e-2,1.4e-2,2e-2,3e-2,4.5e-2,7e-2,1e-1,1.4e-1,2e-1,3e-1,4.5e-1,7e-1,1])
